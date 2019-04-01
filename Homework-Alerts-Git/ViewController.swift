@@ -71,5 +71,7 @@ class ViewController: UIViewController {
     // unnecessary commit
     
     //ver2
+    
+    // fixing ver1
 }
 
