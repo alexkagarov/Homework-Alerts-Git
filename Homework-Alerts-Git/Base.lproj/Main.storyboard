@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_Alerts_Git" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gzr-us-RBb">
+                                <rect key="frame" x="0.0" y="193" width="320" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMo-Pn-AvH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <state key="normal" title="1. Simple Alert"/>
+                                        <connections>
+                                            <action selector="firstBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcB-fD-wC7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gae-hH-PzG">
+                                        <rect key="frame" x="0.0" y="38" width="320" height="30"/>
+                                        <state key="normal" title="2. Simple Action Sheet"/>
+                                        <connections>
+                                            <action selector="secondBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3b-Zr-hXB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBs-5w-34Y">
+                                        <rect key="frame" x="0.0" y="76" width="320" height="30"/>
+                                        <state key="normal" title="3. Alert with destructive button"/>
+                                        <connections>
+                                            <action selector="thirdBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4V-cf-UaK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7L-8O-SF0">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                        <state key="normal" title="4. Alert with more than 2 buttons"/>
+                                        <connections>
+                                            <action selector="fourthBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7i-ew-LDh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIC-xR-Htr">
+                                        <rect key="frame" x="0.0" y="152" width="320" height="30"/>
+                                        <state key="normal" title="5. Alert with UITextField"/>
+                                        <connections>
+                                            <action selector="fifthBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6IZ-ds-rAf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gzr-us-RBb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1QK-oO-Kwd"/>
+                            <constraint firstAttribute="trailing" secondItem="gzr-us-RBb" secondAttribute="trailing" id="DcO-CX-7Ch"/>
+                            <constraint firstItem="gzr-us-RBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T9a-TY-VpZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="actionSheetBtn" destination="gae-hH-PzG" id="M4q-hI-LVG"/>
+                        <outlet property="alertBtn" destination="qMo-Pn-AvH" id="AJd-7R-2MB"/>
+                        <outlet property="destrucAlertBtn" destination="uBs-5w-34Y" id="2Us-e1-sT0"/>
+                        <outlet property="multipleActionsBtn" destination="A7L-8O-SF0" id="Vyk-Db-TqX"/>
+                        <outlet property="textFieldAlertBtn" destination="BIC-xR-Htr" id="4aH-Co-R0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
