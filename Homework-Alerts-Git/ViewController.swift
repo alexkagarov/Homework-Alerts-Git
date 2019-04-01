@@ -74,5 +74,7 @@ class ViewController: UIViewController {
     
     // fixing ver1
     //commit to ver2
+    
+    // merged to master + remote commit
 }
 
