@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gzr-us-RBb">
-                                <rect key="frame" x="0.0" y="193" width="320" height="182"/>
+                                <rect key="frame" x="0.0" y="174" width="320" height="220"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMo-Pn-AvH">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
@@ -56,6 +56,13 @@
                                             <action selector="fifthBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6IZ-ds-rAf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sH3-Ui-Mq9">
+                                        <rect key="frame" x="0.0" y="190" width="320" height="30"/>
+                                        <state key="normal" title="6. Pop Up View"/>
+                                        <connections>
+                                            <action selector="sixthBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8QL-2j-sKc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -72,11 +79,69 @@
                         <outlet property="alertBtn" destination="qMo-Pn-AvH" id="AJd-7R-2MB"/>
                         <outlet property="destrucAlertBtn" destination="uBs-5w-34Y" id="2Us-e1-sT0"/>
                         <outlet property="multipleActionsBtn" destination="A7L-8O-SF0" id="Vyk-Db-TqX"/>
+                        <outlet property="popUpBtn" destination="sH3-Ui-Mq9" id="jll-JC-x38"/>
                         <outlet property="textFieldAlertBtn" destination="BIC-xR-Htr" id="4aH-Co-R0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="jFj-nh-nAG">
+            <objects>
+                <viewController storyboardIdentifier="popUpVCidentifier" id="cdG-Gt-fps" customClass="PopUpViewController" customModule="Homework_Alerts_Git" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hpP-zh-jRm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-qL-n2P">
+                                <rect key="frame" x="40" y="204" width="240" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the pop-up message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-JP-LSf">
+                                        <rect key="frame" x="20" y="20" width="200" height="80"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPU-fo-a7K">
+                                        <rect key="frame" x="50" y="120" width="140" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Thank you!"/>
+                                        <connections>
+                                            <action selector="closePopUpBtn:" destination="cdG-Gt-fps" eventType="touchUpInside" id="af2-Ui-eGv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1fB-JP-LSf" firstAttribute="leading" secondItem="uhJ-qL-n2P" secondAttribute="leading" constant="20" id="A0A-Qu-jVV"/>
+                                    <constraint firstItem="tPU-fo-a7K" firstAttribute="top" secondItem="uhJ-qL-n2P" secondAttribute="top" constant="120" id="F1r-dL-wlZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="1fB-JP-LSf" secondAttribute="trailing" constant="20" id="NZG-eo-WRh"/>
+                                    <constraint firstItem="tPU-fo-a7K" firstAttribute="leading" secondItem="uhJ-qL-n2P" secondAttribute="leading" constant="50" id="Qf9-Yf-b0U"/>
+                                    <constraint firstItem="tPU-fo-a7K" firstAttribute="top" secondItem="1fB-JP-LSf" secondAttribute="bottom" constant="20" id="Top-1L-V4q"/>
+                                    <constraint firstItem="1fB-JP-LSf" firstAttribute="top" secondItem="uhJ-qL-n2P" secondAttribute="top" constant="20" id="UXz-Xy-z0m"/>
+                                    <constraint firstAttribute="trailing" secondItem="tPU-fo-a7K" secondAttribute="trailing" constant="50" id="fgM-Ul-eQs"/>
+                                    <constraint firstAttribute="bottom" secondItem="tPU-fo-a7K" secondAttribute="bottom" constant="10" id="viW-48-M6v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uhJ-qL-n2P" firstAttribute="centerX" secondItem="hpP-zh-jRm" secondAttribute="centerX" id="FZe-AB-nEB"/>
+                            <constraint firstItem="uhJ-qL-n2P" firstAttribute="leading" secondItem="mXA-U0-TuD" secondAttribute="leading" constant="40" id="QOZ-oH-IjB"/>
+                            <constraint firstItem="mXA-U0-TuD" firstAttribute="trailing" secondItem="uhJ-qL-n2P" secondAttribute="trailing" constant="40" id="e24-RZ-Cax"/>
+                            <constraint firstItem="uhJ-qL-n2P" firstAttribute="centerY" secondItem="hpP-zh-jRm" secondAttribute="centerY" id="oyV-ah-Ro8"/>
+                            <constraint firstItem="uhJ-qL-n2P" firstAttribute="top" secondItem="mXA-U0-TuD" secondAttribute="top" constant="184" id="uEj-vm-MHG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mXA-U0-TuD"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageVIew" destination="uhJ-qL-n2P" id="BBK-mg-Jv3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQY-2H-9xU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.625" y="51.760563380281688"/>
         </scene>
     </scenes>
 </document>

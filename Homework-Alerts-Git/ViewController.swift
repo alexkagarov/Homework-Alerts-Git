@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var destrucAlertBtn: UIButton!
     @IBOutlet weak var multipleActionsBtn: UIButton!
     @IBOutlet weak var textFieldAlertBtn: UIButton!
+    @IBOutlet weak var popUpBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,12 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-
+    @IBAction func sixthBtn(_ sender: UIButton) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVCidentifier") as! PopUpViewController
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParent: self)
+    }
 }
 
