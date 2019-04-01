@@ -72,6 +72,7 @@ class ViewController: UIViewController {
     
     //ver2
     
+    // fixing ver1
     //commit to ver2
 }
 
